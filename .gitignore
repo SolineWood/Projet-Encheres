@@ -1,0 +1,100 @@
+# Créé par https://www.toptal.com/developers/gitignore/api/java,eclipse
+# Modificateur sur https://www.toptal.com/developers/gitignore?templates=java,eclipse
+
+# ## Éclipse ###
+.metadata
+.classpath
+.project
+.settings/
+build/
+poubelle /
+tmp /
+* .tmp
+* .bak
+* .swp
+* ~.nib
+propriétés.locales
+.réglages /
+.loadpath
+.recommandateurs
+
+# Constructeurs d'outils externes
+.externalToolBuilders /
+
+# "Configurations de lancement Eclipse" disponibles localement
+* .lancement
+
+# Spécifique à PyDev (Python IDE pour Eclipse)
+* .pydevproject
+
+# Spécifique à CDT (outils de développement C/C++)
+.cproject
+
+# outils automatiques CDT
+.autotools
+
+# Processeur d'annotations Java (APT)
+.factorypath
+
+# Spécifique à PDT (outils de développement PHP)
+.buildpath
+
+# greffon sbteclipse
+.cible
+
+# Plugin Sterne
+.tern-projet
+
+# greffon TeXlipse
+.texlipse
+
+# STS (suite d'outils de printemps)
+.springBeans
+
+# Recommandateurs de code
+.recommandateurs /
+
+# Traitement des annotations
+.apt_generated /
+.apt_generated_test /
+
+# Spécifique à Scala IDE (développement Scala & Java pour Eclipse)
+.cache-main
+.scala_dependencies
+.feuille  de  travail
+
+# Décommentez cette ligne si vous souhaitez ignorer le fichier de description du projet.
+# généralement, ce fichier suivi s'il contiendrait des configurations de build/dépendance :
+# .projet
+
+# ## Patch Éclipse ###
+# Outillage de démarrage à ressort
+.sts4-cache /
+
+# ## Java ###
+# Fichier de classe compilé
+* .classeur
+
+#Fichier journal
+* .Journal
+
+# fichiers BlueJ
+* .ctxt
+
+# Outils mobiles pour Java (J2ME)
+.mtj.tmp /
+
+# Fichiers de colis #
+* .pot
+* .guerre
+* .nar
+* .oreille
+* .Zip  * :  english
+* .tar.gz
+* .rar
+
+# journaux de plantation de la machine virtuelle, voir http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid *
+replay_pid *
+
+# Fin de https://www.toptal.com/developers/gitignore/api/java,eclipse
