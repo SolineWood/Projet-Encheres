@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ArticleVendu {
 	
-	private String noArticle;
+	private Integer noArticle;
 	private String nomArticle;
 	private String description;
 	private LocalDate dateDebutEncheres;
@@ -29,7 +29,7 @@ public class ArticleVendu {
 	 * @param tabLieuRetrait
 	 * @param lstEncheres
 	 */
-	public ArticleVendu(String noArticle, String nomArticle, String description, LocalDate dateDebutEncheres,
+	public ArticleVendu(Integer noArticle, String nomArticle, String description, LocalDate dateDebutEncheres,
 			LocalDate dateFinEncheres, Integer miseAPrix, Integer prixVente, String etatVente, Retrait[] tabLieuRetrait,
 			List<Enchere> lstEncheres) {
 		super();
@@ -52,7 +52,7 @@ public class ArticleVendu {
 		super();
 	}
 
-	public String getNoArticle() {
+	public Integer getNoArticle() {
 		return noArticle;
 	}
 
@@ -92,7 +92,7 @@ public class ArticleVendu {
 		return lstEncheres;
 	}
 
-	public void setNoArticle(String noArticle) {
+	public void setNoArticle(Integer noArticle) {
 		this.noArticle = noArticle;
 	}
 
