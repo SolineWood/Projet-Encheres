@@ -17,7 +17,7 @@ import fr.eni.enchere.bo.ArticleVendu;
  */
 public interface ArticleVenduDAO {
 	
-	public void insert (ArticleVendu articleVendu) throws DALException;
-	public List<ArticleVendu> selectAll() throws DALException;
+	public void insert (ArticleVendu articleVendu) throws DalException;
+	public List<ArticleVendu> selectAll() throws DalException;
 
 }

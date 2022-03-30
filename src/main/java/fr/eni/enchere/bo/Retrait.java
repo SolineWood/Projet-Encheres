@@ -5,6 +5,7 @@ public class Retrait {
 	private String rue;
 	private String code_postal;
 	private String ville;
+	private ArticleVendu articleVendu;
 	/**
 	 * 
 	 */
@@ -19,6 +20,33 @@ public class Retrait {
 		this.rue = rue;
 		this.code_postal = code_postal;
 		this.ville = ville;
+	}
+	
+	/**
+	 *Constructeur
+	 * @param rue
+	 * @param code_postal
+	 * @param ville
+	 * @param articleVendu
+	 */
+	public Retrait(String rue, String code_postal, String ville, ArticleVendu articleVendu) {
+		this.rue = rue;
+		this.code_postal = code_postal;
+		this.ville = ville;
+		this.articleVendu = articleVendu;
+	}
+	
+	/**
+	 * @return the articleVendu
+	 */
+	public ArticleVendu getArticleVendu() {
+		return articleVendu;
+	}
+	/**
+	 * @param articleVendu the articleVendu to set
+	 */
+	public void setArticleVendu(ArticleVendu articleVendu) {
+		this.articleVendu = articleVendu;
 	}
 	/**
 	 * @return the rue

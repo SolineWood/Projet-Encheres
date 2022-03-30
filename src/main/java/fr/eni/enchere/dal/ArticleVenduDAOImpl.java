@@ -42,7 +42,7 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
 	 * @throws DALException
 	 */
 	@Override
-	public void insert(ArticleVendu articleVendu) throws DALException {
+	public void insert(ArticleVendu articleVendu) throws DalException {
 		Utilisateur utilisateur = new Utilisateur();
 		Categorie categorie = new Categorie();
 		try (Connection con = ConnectionProvider.getConnection()) {
@@ -64,7 +64,7 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-			throw new DALException("Problème d'insert");
+			throw new DalException("Problème d'insert");
 		}
 
 	}
@@ -74,7 +74,7 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
 	 * @throws DALException 
 	 */
 	@Override
-	public List<ArticleVendu> selectAll() throws DALException {
+	public List<ArticleVendu> selectAll() throws DalException {
 		List<ArticleVendu> result= new ArrayList<ArticleVendu>();
 		try(Connection con = ConnectionProvider.getConnection()) {
 			PreparedStatement stmt = con.prepareStatement(SELECT);
@@ -86,7 +86,7 @@ public class ArticleVenduDAOImpl implements ArticleVenduDAO {
 				result.add(articleVendu);
 			}
 		}catch (SQLException e) {
-			throw new DALException("Problème de select");
+			throw new DalException("Problème de select");
 		}
 		return result;
 	}

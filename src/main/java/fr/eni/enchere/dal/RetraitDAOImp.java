@@ -23,11 +23,10 @@ import fr.eni.enchere.dal.util.ConnectionProvider;
  * 29 mars 2022
  */
 public class RetraitDAOImp implements RetraitDAO {
-	private final String SELECT = "SELECT no_article, rue, code_postal, ville FROM RETRAITS";
-	private final String INSERT = "INSERT INTO RETRAITS (no_article,rue,code_postal,ville) VALUES (?,?,?,?)";
-	private final String recupe = "SELECT no_article FROM ARTICLES_VENDUS"
-			+ " join ARTICLES_VENDUS on RETRAITS.no_article = ARTICLES_VENDUS.no_article";
+	private final String SELECT = "SELECT rue, code_postal, ville FROM RETRAITS" 
+				+ " join ARTICLES_VENDUS on RETRAITS.no_article = ARTICLES_VENDUS.no_article";
 	
+	private final String INSERT = "INSERT INTO RETRAITS (no_article,rue,code_postal,ville) VALUES (?,?,?,?)";
 	
 	public void insert(Retrait retrait) throws Exception {
 		ArticleVendu articleVendu = new ArticleVendu();
@@ -45,18 +44,6 @@ public class RetraitDAOImp implements RetraitDAO {
 		}
 	}
 	
-	//commentaire de me***
-	
-	public void teste_a_suprimer() {
-		
-	}
-	
-	
-	
-	
-	
-	
-	
 	
 	public List<Retrait> selectAll() throws Exception {
 		List<Retrait> result= new ArrayList<Retrait>();
@@ -64,7 +51,15 @@ public class RetraitDAOImp implements RetraitDAO {
 			PreparedStatement stmt = con.prepareStatement(SELECT);
 			ResultSet rs = stmt.executeQuery();
 			while(rs.next()) {
-				Retrait retrait = new Retrait(rs.getString("rue") ,rs.getString("code_postal"),rs.getString("ville") );
+				Retrait retrait = new Retrait();
+				retrait.setRue(rs.getString("rue"));
+				retrait.setCode_postal(rs.getString("code_postal"));
+				retrait.setVille(rs.getString("ville"));
+		
+				ArticleVendu articleVendu = new ArticleVendu();
+				articleVendu.setNoArticle(rs.getInt("no_article"));
+				
+				retrait.setArticleVendu(articleVendu);
 				result.add(retrait);
 			}
 		}catch (SQLException e) {
@@ -72,9 +67,5 @@ public class RetraitDAOImp implements RetraitDAO {
 		}
 		return result;
 	}
-
-
-
-
 
 }
