@@ -36,9 +36,8 @@ public class ArticleVendu {
 	 * @param lieuRetrait
 	 * @param lstEncheres
 	 */
-	public ArticleVendu(Integer noArticle, String nomArticle, String description, LocalDate dateDebutEncheres,
-			LocalDate dateFinEncheres, Integer miseAPrix, Integer prixVente, String etatVente, Retrait lieuRetrait,
-			List<Enchere> lstEncheres) {
+	public ArticleVendu(Integer noArticle, String nomArticle, String description, LocalDate dateDebutEncheres,LocalDate dateFinEncheres,
+			Integer miseAPrix, Integer prixVente, String etatVente, Retrait lieuRetrait,List<Enchere> lstEncheres) {
 		super();
 		this.noArticle = noArticle;
 		this.nomArticle = nomArticle;
@@ -104,6 +103,7 @@ public class ArticleVendu {
 	public List<Enchere> getLstEncheres() {
 		return lstEncheres;
 	}
+
 	public void setNoArticle(Integer noArticle) {
 		this.noArticle = noArticle;
 	}
