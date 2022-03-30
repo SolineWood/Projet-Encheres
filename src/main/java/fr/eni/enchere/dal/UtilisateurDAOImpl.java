@@ -70,7 +70,7 @@ public class UtilisateurDAOImpl implements UtilisateurDAO{
 
 
 	@Override
-	public Integer selectById(Integer id) {
+	public Utilisateur selectById(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -18,6 +18,7 @@ import fr.eni.enchere.bo.ArticleVendu;
  */
 public class ArticleVenduDAOMock implements ArticleVenduDAO {
 
+	private ArticleVendu articleVendu;
 	private List<ArticleVendu> lstArticleVendu = new ArrayList<ArticleVendu>();	
 	/**
 	*{@inheritedDoc}
@@ -33,6 +34,14 @@ public class ArticleVenduDAOMock implements ArticleVenduDAO {
 	@Override
 	public List<ArticleVendu> selectAll() {
 		return lstArticleVendu;
+	}
+
+	/**
+	*{@inheritedDoc}
+	*/
+	@Override
+	public ArticleVendu selectById(int id) throws DalException {
+		return articleVendu;
 	}
 
 	

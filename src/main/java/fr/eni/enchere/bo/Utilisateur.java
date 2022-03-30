@@ -15,18 +15,12 @@ public class Utilisateur {
 	private String motDePasse;
 	private Integer credit;
 	private String administrateur;
-<<<<<<< HEAD
 
 	/**
 	 * Constructeur.
 	 */
 	public Utilisateur() {
 		super();
-=======
-	
-	public Utilisateur() {
-		
->>>>>>> 421b91d80720c671abf794fec66f32a338027eb6
 	}
 
 	public Utilisateur(Integer noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
