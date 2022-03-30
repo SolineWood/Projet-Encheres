@@ -13,7 +13,7 @@ public class Utilisateur {
 	private Integer codePostal;
 	private String ville;
 	private String motDePasse;
-	private float credit;
+	private Integer credit;
 	private String administrateur;
 	
 	public Utilisateur() {
@@ -21,7 +21,7 @@ public class Utilisateur {
 	}
 
 	public Utilisateur(Integer noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
-			String rue, Integer codePostal, String ville, String motDePasse, float crédis, String administrateur) {
+			String rue, Integer codePostal, String ville, String motDePasse, Integer crédis, String administrateur) {
 		
 		this.noUtilisateur = noUtilisateur;
 		this.pseudo = pseudo;
@@ -120,11 +120,11 @@ public class Utilisateur {
 		this.motDePasse = motDePasse;
 	}
 
-	public float getCredit() {
+	public int getCredit() {
 		return credit;
 	}
 
-	public void setCredit(float credit) {
+	public void setCredit(Integer credit) {
 		this.credit = credit;
 	}
 
@@ -190,9 +190,11 @@ public class Utilisateur {
 			builder.append(motDePasse);
 			builder.append(", ");
 		}
-		builder.append("credit=");
-		builder.append(credit);
-		builder.append(", ");
+		if (credit != null) {
+			builder.append("credit=");
+			builder.append(credit);
+			builder.append(", ");
+		}
 		if (administrateur != null) {
 			builder.append("administrateur=");
 			builder.append(administrateur);
@@ -200,6 +202,8 @@ public class Utilisateur {
 		builder.append("]");
 		return builder.toString();
 	}
+
+	
 	
 	
 	

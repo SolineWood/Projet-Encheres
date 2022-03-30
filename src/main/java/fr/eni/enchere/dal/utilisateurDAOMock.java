@@ -20,6 +20,12 @@ public class utilisateurDAOMock implements utilisateurDAO{
 	public List<Utilisateur> selectAll() {
 		return listeUtilisateur;
 	}
+
+	@Override
+	public Integer selectById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }
