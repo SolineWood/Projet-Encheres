@@ -16,10 +16,12 @@ public class Utilisateur {
 	private float credit;
 	private String administrateur;
 	
-	
+	public Utilisateur() {
+		
+	}
 
 	public Utilisateur(Integer noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
-			String rue, Integer codePostal, String ville, String motDePasse, float credit, String administrateur) {
+			String rue, Integer codePostal, String ville, String motDePasse, float crédis, String administrateur) {
 		
 		this.noUtilisateur = noUtilisateur;
 		this.pseudo = pseudo;
@@ -31,7 +33,7 @@ public class Utilisateur {
 		this.codePostal = codePostal;
 		this.ville = ville;
 		this.motDePasse = motDePasse;
-		this.credit = credit;
+		this.credit = crédis;
 		this.administrateur = administrateur;
 	}
 
