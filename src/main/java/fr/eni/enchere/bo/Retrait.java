@@ -3,7 +3,7 @@ package fr.eni.enchere.bo;
 public class Retrait {
 	
 	private String rue;
-	private Integer code_postal;
+	private String code_postal;
 	private String ville;
 	/**
 	 * 
@@ -15,7 +15,7 @@ public class Retrait {
 	 * @param code_postal
 	 * @param ville
 	 */
-	public Retrait(String rue, Integer code_postal, String ville) {
+	public Retrait(String rue, String code_postal, String ville) {
 		this.rue = rue;
 		this.code_postal = code_postal;
 		this.ville = ville;
@@ -35,13 +35,13 @@ public class Retrait {
 	/**
 	 * @return the code_postal
 	 */
-	public Integer getCode_postal() {
+	public String getCode_postal() {
 		return code_postal;
 	}
 	/**
 	 * @param code_postal the code_postal to set
 	 */
-	public void setCode_postal(Integer code_postal) {
+	public void setCode_postal(String code_postal) {
 		this.code_postal = code_postal;
 	}
 	/**
