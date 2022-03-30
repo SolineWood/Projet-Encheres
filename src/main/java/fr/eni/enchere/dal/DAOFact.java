@@ -1,6 +1,3 @@
-/**
- * 
- */
 package fr.eni.enchere.dal;
 
 /**
@@ -11,5 +8,14 @@ public class DAOFact {
 	public static RetraitDAO getRetraitDAO() {
 		return new RetraitDAOImp();
 	}
+	
+	public static UtilisateurDAO getUtilisateurDAO() {
+		return new UtilisateurDAOImpl();
+	}
+	
+	/*public static ArticleVenduDAO getArticleVenduDAO() {
+		return new ArticleVenduDAOImpl();
+	}*/
 
 }
+
