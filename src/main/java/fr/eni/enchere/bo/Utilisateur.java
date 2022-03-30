@@ -15,8 +15,13 @@ public class Utilisateur {
 	private String motDePasse;
 	private float credit;
 	private String administrateur;
-	
-	
+
+	/**
+	 * Constructeur.
+	 */
+	public Utilisateur() {
+		super();
+	}
 
 	public Utilisateur(Integer noUtilisateur, String pseudo, String nom, String prenom, String email, String telephone,
 			String rue, Integer codePostal, String ville, String motDePasse, float credit, String administrateur) {
