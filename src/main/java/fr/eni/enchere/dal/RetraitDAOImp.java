@@ -45,6 +45,18 @@ public class RetraitDAOImp implements RetraitDAO {
 		}
 	}
 	
+	//commentaire de me***
+	
+	public void teste_a_suprimer() {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	public List<Retrait> selectAll() throws Exception {
 		List<Retrait> result= new ArrayList<Retrait>();
