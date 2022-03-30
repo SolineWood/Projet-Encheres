@@ -13,7 +13,7 @@ import fr.eni.enchere.dal.util.ConnectionProvider;
 
 
 
-public class utilisateurDAOImpl implements utilisateurDAO{
+public class UtilisateurDAOImpl implements UtilisateurDAO{
 	
 	private final String SELECT = "noUtilisateur, pseudo, nom, prenom,email,telephone,rue,codePostal,ville,motDePasse,credit,administrateur, FROM UTILISATEURS";
 	private final String INSERT = "INSERT INTO UTILISATEURS (noUtilisateur, pseudo, nom, prenom,email,telephone,rue,codePostal,ville,motDePasse,credit,administrateur,) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";

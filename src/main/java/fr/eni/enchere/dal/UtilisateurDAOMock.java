@@ -5,7 +5,7 @@ import java.util.List;
 import fr.eni.enchere.bo.Utilisateur;
 
 
-public class utilisateurDAOMock implements utilisateurDAO{
+public class UtilisateurDAOMock implements UtilisateurDAO{
 	
 	private static Integer cpt=0;
 	private List<Utilisateur> listeUtilisateur = new ArrayList<>();

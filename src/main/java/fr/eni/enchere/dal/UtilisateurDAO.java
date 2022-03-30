@@ -4,7 +4,7 @@ import java.util.List;
 
 import fr.eni.enchere.bo.Utilisateur;
 
-public interface utilisateurDAO {
+public interface UtilisateurDAO {
 	public void insert(Utilisateur utilisateur) throws DalException;
 	public List<Utilisateur> selectAll() throws DalException;
 	public Integer selectById(Integer id);
